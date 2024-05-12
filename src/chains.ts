@@ -19,6 +19,17 @@ export const contractNetworks: ContractNetworksConfig = {
   [`${chains.blastSepolia.id}`]: defaultL2Addresses,
   [`${chains.optimismSepolia.id}`]: defaultL2Addresses,
   [`${chains.blast.id}`]: defaultL2Addresses,
+  [`${chains.degen.id}`]: {
+    multiSendAddress: "0x998739BFdAAdde7C933B942a68053933098f9EDa",
+    safeProxyFactoryAddress: "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+    multiSendCallOnlyAddress: "0xA1dabEF33b3B82c7814B6D82A79e50F4AC44102B",
+    fallbackHandlerAddress: "0x017062a1dE2FE6b99BE3d9d37841FeD19F573804",
+    createCallAddress: "0xB19D6FFc2182150F8Eb585b79D4ABcd7C5640A9d",
+    signMessageLibAddress: "0x98FFBBF51bb33A056B08ddf711f289936AafF717",
+    // renamed from safeMasterCopyAddress
+    safeSingletonAddress: "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+    simulateTxAccessorAddress: "0x727a77a074D1E6c4530e814F89E618a3298FC044",
+  },
 };
 
 export const allowedNetworks: { [chainId: number]: chains.Chain } = {
@@ -36,6 +47,7 @@ export const allowedNetworks: { [chainId: number]: chains.Chain } = {
   [chains.optimismSepolia.id]: chains.optimismSepolia,
   [chains.blastSepolia.id]: chains.blastSepolia,
   [chains.blast.id]: chains.blast,
+  [chains.degen.id]: chains.degen,
 };
 
 Object.keys(contractNetworks).map((network) => {
